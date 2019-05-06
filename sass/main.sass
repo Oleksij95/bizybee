@@ -1,0 +1,1559 @@
+@import "fonts"
+@import "libs"
+@import "_vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+/*html, body
+	height: 100%*/
+.text-right
+	text-align: right
+.hidden
+	display: none
+
+.pl0
+	padding-left: 0
+.pr0
+	padding-right: 0
+.pl140
+	padding-left: 140px
+h2
+	font-size: 51px
+	font-family: "GilroyBlack"
+	margin: 0
+	&:before
+		content: ""
+		width: 27px
+		height: 35px
+		display: inline-block
+		background-image: url("../img/divider.png")
+		background-size: cover
+		position: absolute
+		left: -30px
+		top: 10px
+.active_info
+	opacity: 1!important
+.slick-gr-right
+	img
+		transform: rotate(180deg)
+.slick-gr-left, .slick-gr-right
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: #fff
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	box-shadow: 0 1px 4px 1px #e4e4e4
+	position: absolute
+	top: calc(50% - 25px)
+	z-index: 1
+.slick-gr-left
+	left: 20px
+.slick-gr-right
+	right: 20px
+.btn
+	background-color: $accent
+	padding: 11px 29px
+	color: #fff
+	text-transform: uppercase
+	border-bottom: 3px solid #eaad0c
+	transition: background-color .3s
+	font-size: 13px
+	font-family: "GilroyBold"
+	cursor: pointer
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: darken($accent, 5%)
+.phone
+	color: $black
+	font-family: "GilroyBold"
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+header
+	.top_line
+		height: 92px
+		line-height: 92px
+		background-color: $silver
+		img
+			vertical-align: -28px
+	ul
+		padding: 0
+		list-style: none
+		margin: 0
+		li
+			display: inline-block
+			margin: 0 10px
+			.phone
+				font-size: 21px
+				font-family: "GilroySemiBold"
+				vertical-align: -5px
+			&:last-child
+				margin-right: 0
+				text-decoration: underline
+			a
+				font-size: 13px
+				color: $black
+				font-family: "GilroyMedium"
+				text-transform: uppercase
+				&:hover
+					text-decoration: none
+					color: $black
+	nav
+		ul
+			height: 45px
+			line-height: 45px
+			background-color: #fff
+			li
+				&:last-child
+					text-decoration: none
+				a
+					font-size: 17px
+					text-transform: inherit
+		.section 
+			.menu-btn 
+			  display: block
+			  width: 50px
+			  height: 50px
+			  background-color: #fff
+			  border-radius: 50%
+			  position: relative
+			.menu-btn span,
+			.menu-btn span::before,
+			.menu-btn span::after 
+			  position: absolute
+			  top: 50%
+			  margin-top: -1px
+			  left: 33%
+			  margin-left: -10px
+			  width: 33px
+			  height: 2px
+			  background-color: $accent
+			.menu-btn span::before,
+			.menu-btn span::after 
+			  content: ''
+			  display: block
+			  transition: 0.2s
+			.menu-btn span::before 
+			  transform: translateY(-5px)
+			  top: -1px
+			.menu-btn span::after 
+			  transform: translateY(5px)
+			  margin-top: 1px
+			.menu-btn_active span:before 
+			  transform: rotate(-35deg)
+			  width: 14px
+			  transform-origin: left bottom
+			  left: 11px
+			  top: 0
+			.menu-btn_active span:after 
+			  transform: rotate(35deg)
+			  width: 14px
+			  transform-origin: left top
+			  margin-top: 0
+			  left: 11px
+			.menu-block 
+			  display: flex
+			  justify-content: center
+			  align-items: center
+			.menu-nav 
+			  background-color: #fff
+			  height: 50px
+			.menu-nav__link 
+			  display: inline-block
+			  text-decoration: none
+			  color: #fff
+			  margin-right: 20px
+			.menu-nav__link 
+			  transition: 0.5s
+			  transform-origin: right center
+			  transform: translateX(50%)
+			  opacity: 0
+			.menu-nav__link_active 
+			  transform: translateX(0%)
+			  opacity: 1
+	.main_banner
+		min-height: 935px
+		background-image: url("../img/main_banner.jpg")
+		background-size: cover
+		background-position: center center
+		padding-top: 262px
+		position: relative
+		.bottom_text
+			position: absolute
+			bottom: 0
+		h2
+			color: #fff
+			line-height: 58px
+		p
+			color: #f8f8f8
+			font-size: 20px
+			font-family: "GilroyLight"
+			margin-top: 25px
+			span
+				background-color: $accent
+				font-family: "GilroyBold"
+				color: $black
+				padding: 0 5px
+		.header_calc
+			width: 330px
+			margin-left: 30px
+			background-color: rgba(255, 255, 255, 0.85)
+			padding: 25px 35px
+			text-align: center
+			.title
+				text-align: center
+				font-size: 23px
+				font-family: "GilroyBold"
+				color: $black
+				padding: 0
+				margin: 0
+				margin-bottom: 20px
+			.btn
+				font-size: 19px
+				width: 100%
+				text-transform: inherit
+				display: block
+				margin-bottom: 15px
+			.cleaning_type
+				color: $black
+				margin: 0
+				padding: 0
+				font-size: 19px
+				font-family: "GilroyMedium"
+				border-bottom: 1px solid
+				display: inline
+				cursor: pointer
+			.center
+			  display: inline-block
+			  width: 100%
+			  margin-bottom: 20px
+	
+			.custom-select-wrapper
+			  position: relative
+			  display: inline-block
+			  user-select: none
+			  width: 100%
+			  select
+			    display: none
+
+			.custom-select
+			  position: relative
+			  display: inline-block
+			  width: 100%
+
+			.custom-select-trigger
+			  position: relative
+			  display: block
+			  width: 100%
+			  padding: 11px
+			  padding-left: 30px
+			  font-size: 17px
+			  font-weight: 300
+			  color: $black
+			  background: #fff
+			  cursor: pointer
+			  text-align: left
+			  font-family: "GilroyMedium"
+			  &:after
+			    position: absolute
+			    display: block
+			    content: ''
+			    width: 10px
+			    height: 10px
+			    top: 50%
+			    right: 25px
+			    margin-top: -3px
+			    border-bottom: 1px solid $accent
+			    border-right: 1px solid $accent
+			    transform: rotate(45deg) translateY(-50%)
+			    transition: all .4s ease-in-out
+			    transform-origin: 50% 0
+
+			.custom-select.opened .custom-select-trigger:after
+			  margin-top: 3px
+			  transform: rotate(-135deg) translateY(-50%)
+
+			.custom-options
+			  position: absolute
+			  display: block
+			  top: 100%
+			  left: 0
+			  right: 0
+			  min-width: 100%
+			  margin: 15px 0
+			  border: 1px solid #b5b5b5
+			  border-radius: 4px
+			  box-sizing: border-box
+			  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07)
+			  background: #fff
+			  transition: all .4s ease-in-out
+			  opacity: 0
+			  visibility: hidden
+			  pointer-events: none
+			  transform: translateY(-15px)
+			  z-index: 1
+
+			.custom-select.opened .custom-options
+			  opacity: 1
+			  visibility: visible
+			  pointer-events: all
+			  transform: translateY(0)
+
+			.custom-options:before
+			  position: absolute
+			  display: block
+			  content: ''
+			  bottom: 100%
+			  right: 25px
+			  width: 7px
+			  height: 7px
+			  margin-bottom: -4px
+			  border-top: 1px solid #b5b5b5
+			  border-left: 1px solid #b5b5b5
+			  background: #fff
+			  transform: rotate(45deg)
+			  transition: all .4s ease-in-out
+
+			.option-hover:before
+			  background: #f9f9f9
+
+			.custom-option
+			  position: relative
+			  display: block
+			  padding: 0 22px
+			  border-bottom: 1px solid #b5b5b5
+			  font-size: 18px
+			  font-weight: 600
+			  color: #b5b5b5
+			  line-height: 47px
+			  cursor: pointer
+			  transition: all .4s ease-in-out
+			  &:first-of-type
+			    border-radius: 4px 4px 0 0
+			  &:last-of-type
+			    border-bottom: 0
+			    border-radius: 0 0 4px 4px
+			  &:hover, &.selection
+			    background: #f9f9f9
+    
+section#link
+	height: 55px
+	line-height: 55px
+	background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,0.25) 34%, rgba(254,254,254,0) 43%, rgba(249,249,249,0.49) 71%, rgba(255,255,255,1) 100%)
+	background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,0.25) 34%,rgba(254,254,254,0) 43%,rgba(249,249,249,0.49) 71%,rgba(255,255,255,1) 100%)
+	background: linear-gradient(to bottom,#f9f9f9 0,#fff 7%,rgba(255,255,255,.25) 34%,rgba(255, 255, 255, 0) 43%,#f8f8f8 71%,#f5f5f5 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 )
+
+
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		text-align: right
+		li
+			display: inline-block
+			margin: 0 13px
+			&:first-child
+				font-family: "GilroyBold"
+				font-size: 19px
+				color: $black
+				margin-left: 0
+				margin-right: 47px
+			&:last-child
+				margin-right: 0
+			a
+				font-family: "GilroyMedium"
+				font-size: 17px
+				color: $black
+				text-decoration: none
+				border-bottom: 1px solid
+
+section#advantages
+	padding: 50px 60px
+	background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,0.25) 34%, rgba(254,254,254,0) 43%, rgba(249,249,249,0.49) 71%, rgba(255,255,255,1) 100%)
+	background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,0.25) 34%,rgba(254,254,254,0) 43%,rgba(249,249,249,0.49) 71%,rgba(255,255,255,1) 100%)
+	background: linear-gradient(to bottom,#f9f9f9 0,#fff 7%,rgba(255,255,255,.25) 34%,rgba(255, 255, 255, 0) 43%,#f8f8f8 71%,#f5f5f5 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 )
+	h3.title
+		font-size: 25px
+		font-family: "GilroyBold"
+		color: $black
+		line-height: 35px
+	p
+		font-size: 17px
+		color: $black
+		font-family: "GilroyLight"
+	.link
+		font-size: 16px
+		color: $black
+		font-family: "GilroyMedium"
+		text-decoration: none
+		display: inline
+		border-bottom: 1px solid
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: -34px
+			top: 8px
+			width: 19px
+			height: 3px
+			background-color: $accent
+	.wrapper_item
+		padding: 0 22px
+		padding-left: 0
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			background-image: url("../img/big_arrow.png")
+			background-size: cover
+			background-repeat: no-repeat
+			width: 44px
+			height: 85%
+			right: 0px
+			top: 15px
+	.second_srapper
+		padding-left: 14px
+		&:after
+			right: -29px
+			width: 44px
+			height: 100%
+	.not_arrow
+		padding: 0 45px
+		padding-right: 0
+		&:after
+			display: none
+
+section#included_leaning
+	.section_header
+		background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,0.25) 34%, rgba(254,254,254,0) 43%, rgba(249,249,249,0.49) 71%, rgba(255,255,255,1) 100%)
+		background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,0.25) 34%,rgba(254,254,254,0) 43%,rgba(249,249,249,0.49) 71%,rgba(255,255,255,1) 100%)
+		background: linear-gradient(to bottom,#f9f9f9 0,#fff 7%,rgba(255,255,255,.25) 34%,rgba(255, 255, 255, 0) 43%,#f8f8f8 71%,#f5f5f5 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 )
+		padding: 11px
+		ul
+			margin: 0
+			line-height: 52px
+	h2
+		font-size: 32px
+		font-family: "GilroyBold"
+		&:before
+			height: 26px
+			top: 14px
+	ul
+		padding: 0
+		list-style: none
+		text-align: right
+		li
+			display: inline-block
+			margin: 0 16px
+			&:last-child
+				margin-right: 0
+			a
+				font-size: 17px
+				font-family: "GilroyMedium"
+				color: $black
+				display: inline
+				border-bottom: 1px solid
+				text-decoration: none
+			a.active
+				color: $accent
+				border-bottom: none
+	img
+		width: 100%
+	.type
+		position: relative
+		.menu
+			position: absolute
+			top: 30px
+			left: 21%
+			ul
+				li
+					background-color: #fff
+					padding: 8px 30px
+					margin: 0
+					a
+						font-size: 19px
+						font-family: "GilroyMedium"
+						text-decoration: none
+						border-bottom: none
+				li.active
+					vertical-align: -3px
+					background-color: transparent
+					padding: 16px 30px
+					padding-right: 60px
+					margin-left: -10px
+					background-image: url("../img/bg_active_type.png")
+					background-position: center center
+					background-size: cover
+					a
+						color: #fff
+				li.first.active
+					background-image: url("../img/bg_active_left_type.png")
+					background-position: bottom
+					background-color: transparent
+					padding-right: 30px
+					padding-left: 60px
+					margin-right: -4px
+					z-index: 1
+
+		.point
+			position: absolute
+			cursor: pointer
+			background-image: url("../img/point.png")
+			background-size: cover
+			background-repeat: no-repeat
+			width: 50px
+			height: 50px
+		.text
+			background-color: #fff
+			padding: 25px
+			color: $black
+			font-family: "GilroyMedium"
+			font-size: 18px
+			position: absolute
+			opacity: 0
+			transition: opacity .35s
+	.type_1
+		.point_1
+			top: 5%
+			left: 2.7%
+			.text
+				width: 210px
+				left: 25px
+				top: 25px
+		.point_2
+			left: 5%
+			top: 74.6%
+			.text
+				width: 260px
+				left: 25px
+				top: 25px
+		.point_3
+			left: 42.5%
+			top: 13%
+			.text
+				width: 190px
+				left: -165px
+				top: 25px
+		.point_4
+			left: 23%
+			top: 79%
+			.text
+				width: 290px
+				left: 25px
+				top: -80px
+		.point_5
+			left: 44.6%
+			top: 40.5%
+			.text
+				width: 210px
+				left: 25px
+				top: -80px
+		.point_6
+			left: 54.6%
+			top: 8.7%
+			.text
+				width: 260px
+				left: 25px
+				top: -52px
+		.point_7
+			left: 62.6%
+			top: 28%
+			.text
+				width: 270px
+				left: 25px
+				top: -109px
+		.point_8
+			left: 59.6%
+			top: 89%
+			.text
+				width: 194px
+				left: 25px
+				top: -79px
+		.point_9
+			left: 81%
+			top: 13.5%
+			.text
+				width: 294px
+				left: 25px
+				top: -79px
+		.point_10
+			left: 83.8%
+			top: 32%
+			.text
+				width: 294px
+				left: 25px
+				top: -79px
+		.point_11
+			left: 93.4%
+			top: 56%
+			.text
+				width: 244px
+				left: -217px
+				top: -79px
+	.type_2
+		.point_1
+			top: 19%
+			left: 2%
+			.text
+				width: 325px
+				left: 25px
+				top: -81px
+		.point_2
+			top: 34%
+			left: 9%
+			.text
+				width: 305px
+				left: 25px
+				top: 25px
+		.point_3
+			top: 93%
+			left: 4%
+			.text
+				width: 194px
+				left: 25px
+				top: -81px
+		.point_4
+			top: 84%
+			left: 21%
+			.text
+				width: 300px
+				left: 25px
+				top: -110px
+		.point_5
+			top: 37%
+			left: 34%
+			.text
+				width: 300px
+				left: 25px
+				top: -50px
+		.point_6
+			top: 16%
+			left: 48%
+			.text
+				width: 280px
+				left: 25px
+				top: 25px
+		.point_7
+			top: 70%
+			left: 44%
+			.text
+				width: 296px
+				left: 25px
+				top: -81px
+		.point_8
+			top: 82%
+			left: 64%
+			.text
+				width: 196px
+				left: 25px
+				top: -51px
+		.point_9
+			top: 61%
+			left: 75%
+			.text
+				width: 296px
+				left: 25px
+				top: -81px
+		.point_10
+			top: 3%
+			left: 80.6%
+			.text
+				width: 196px
+				left: -168px
+				top: 25px
+	.type_3
+		.point_1
+			top: 25%
+			left: 14%
+			.text
+				width: 350px
+				left: 25px
+				top: -81px
+		.point_2
+			top: 93%
+			left: 2%
+			.text
+				width: 300px
+				left: 25px
+				top: -50px
+		.point_3
+			top: 67%
+			left: 21%
+			.text
+				width: 300px
+				left: 25px
+				top: -110px
+		.point_4
+			top: 94%
+			left: 39%
+			.text
+				width: 250px
+				left: -222px
+				top: -81px
+		.point_5
+			top: 5%
+			left: 48.5%
+			.text
+				width: 300px
+				left: 25px
+				top: 25px
+		.point_6
+			top: 67%
+			left: 47.5%
+			.text
+				width: 340px
+				left: 25px
+				top: -110px
+		.point_7
+			top: 91.5%
+			left: 62.5%
+			.text
+				width: 190px
+				left: -163px
+				top: -81px
+		.point_8
+			top: 33.5%
+			left: 90.5%
+			.text
+				width: 200px
+				left: -175px
+				top: -81px
+		.point_9
+			top: 67.5%
+			left: 79.5%
+			.text
+				width: 320px
+				left: 25px
+				top: -81px
+		.point_10
+			top: 92.5%
+			left: 94.5%
+			.text
+				width: 185px
+				left: -158px
+				top: -51px
+	.type_4
+		.point_1
+			top: 45%
+			left: 2%
+			.text
+				width: 250px
+				left: 25px
+				top: -110px
+		.point_2
+			top: 91%
+			left: 4%
+			.text
+				width: 185px
+				left: 25px
+				top: -81px
+		.point_3
+			top: 61%
+			left: 17%
+			.text
+				width: 302px
+				left: 25px
+				top: -110px
+		.point_4
+			top: 27%
+			left: 34%
+			.text
+				width: 302px
+				left: -275px
+				top: -110px
+		.point_5
+			top: 62%
+			left: 45.8%
+			.text
+				width: 302px
+				left: 25px
+				top: -80px
+		.point_6
+			top: 14%
+			left: 65.8%
+			.text
+				width: 220px
+				left: -194px
+				top: -80px
+		.point_7
+			top: 31%
+			left: 74.4%
+			.text
+				width: 220px
+				left: 25px
+				top: 25px
+		.point_8
+			top: 58%
+			left: 76.6%
+			.text
+				width: 245px
+				left: 25px
+				top: -51px
+		.point_9
+			top: 71%
+			left: 75.6%
+			.text
+				width: 305px
+				left: 25px
+				top: 25px
+		.point_10
+			top: 88%
+			left: 66.6%
+			.text
+				width: 305px
+				left: -278px
+				top: -110px
+section#team
+	padding-top: 60px
+	margin-bottom: 60px
+	background-color: #fff
+	h2
+		font-size: 32px
+		margin-bottom: 45px
+		&:before
+			top: 14px
+			height: 26px
+	.flex_wrapper
+		display: flex
+		justify-content: space-between
+	.team_item
+		position: relative
+		.wrapper
+			position: relative
+			width: 175px
+			height: 175px
+			border: 1px solid $accent
+			border-radius: 50%
+			overflow: hidden
+			padding: 8px
+		&:before
+				content: ""
+				width: 195px
+				height: 195px
+				border-radius: 50%
+				position: absolute
+				display: block
+				border: 1px solid $accent
+				opacity: 0.4
+				top: -10px
+				left: -10px
+
+		img
+			border-radius: 50%
+			width: 100%
+			height: 100%
+		.team_info
+			position: absolute
+			box-shadow: 0 0 10px 3px #f3f3f3
+			width: 193px
+			height: 95px
+			top: calc(50% - 47px)
+			background-color: #fff
+			right: -156px
+			padding: 24px 27px
+			p
+				padding: 0
+				margin: 0
+			p.name
+				font-size: 24px
+				font-family: "GilroyBold"
+				color: $black
+				line-height: 24px
+			.assessment
+				color: $accent
+				font-size: "GilroySemiBold"
+				font-size: 21px
+				margin-right: 15px
+			.total_assessment
+				font-size: 14px
+				font-family: "GilroyLight"
+				color: #999999
+				border-bottom: 1px solid
+				text-decoration: none
+				vertical-align: 4px
+section#price
+	padding: 50px 0
+	background-color: #f8f8f8
+	h2
+		font-size: 32px
+		margin-top: 19px
+		&:before
+			top: 35px
+			height: 26px
+	ul
+		padding: 0
+		list-style: none
+		li
+			display: inline-block
+			margin-left: 18px
+			font-size: 17px
+			font-family: "GilroyMedium"
+			cursor: pointer
+			padding: 15px 25px
+			background: rgb(255,255,255)
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(242,242,242,1) 100%)
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 1%,rgba(242,242,242,1) 100%)
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(242,242,242,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 )
+			box-shadow: 0 1px 3px 1px #e1e1e1
+			color: $black
+		li.active
+			background: rgb(242,242,242)
+			background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 100%)
+			background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%)
+			background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(255,255,255,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=0 )
+			box-shadow: 0 1px 2px 1px #d4d4d4
+	table
+		width: 100%
+		margin-top: 60px
+		text-align: center
+		box-shadow: 0 1px 40px 1px #e1e1e1
+		tr
+			padding: 15px 0
+		td
+			padding: 15px 0
+		tbody
+			tr
+				padding: 12px 0
+				background: rgb(255,255,255)
+				background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 100%)
+				background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 100%)
+				background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 )
+			td
+				padding: 12px 0
+				font-size: 17px
+				font-family: "GilroyMedium"
+				color: $black
+				position: relative
+				&:after
+					content: ""
+					position: absolute
+					right: 0
+					top: 7px
+					background-image: url("../img/arrow.png")
+					background-size: cover
+					background-repeat: no-repeat
+					width: 11px
+					height: 38px
+
+		thead
+			background-color: $accent
+			color: #fff
+			text-align: center
+			font-size: 20px
+			font-family: "GilroySemiBold"
+	.wrapper_price
+		padding: 10px
+		background-color: $green
+		margin-top: 52px
+		min-width: 200px
+		margin-left: -20px
+	.price_block
+		color: #fff
+		text-align: center
+		padding: 15px
+		border: 1px solid #4abb7e
+		p
+			font-family: "GilroySemiBold"
+			font-size: 20px
+			margin-bottom: 12px
+			margin-top: 5px
+		ul
+			list-style: none
+			padding: 0
+			margin-bottom: 0
+			margin-top: 0
+			li
+				border-bottom: 1px solid #4abb7e
+				display: block
+				padding: 0
+				margin: 0
+				font-family: "GilroyBold"
+				background: none
+				background-color: transparent
+				box-shadow: none
+				color: #fff
+				padding: 10px 0
+				&:last-child
+					border-bottom: none
+					padding-bottom: 0
+section#revizor
+	background-image: url("../img/bg_reg.png")
+	position: relative
+	background-position: 0 -75px
+	background-repeat: no-repeat
+	background-color: #fff
+	padding-bottom: 46px
+	h2
+		font-size: 32px
+		margin-top: 120px
+		margin-bottom: 20px
+		&:before
+			top: 135px
+			height: 26px
+	p
+		font-size: 17px
+		color: $black
+		font-family: "GilroyLight"
+		margin-bottom: 25px
+	a
+		font-size: 16px
+		font-family: "GilroyMedium"
+		border-bottom: 1px solid
+		color: $black
+		text-decoration: none
+
+section#reviews
+	background-color: #f8f8f8
+	padding-bottom: 60px
+	padding-top: 20px
+	h2
+		font-size: 32px
+		margin-top: 19px
+		&:before
+			top: 35px
+			height: 26px
+	p.search_txt
+		font-size: 17px
+		font-family: "GilroySemiBold"
+		color: $black
+		position: relative
+		margin-top: 30px
+		&:before
+			content: ""
+			position: absolute
+			top: 56%
+			margin-top: -1px
+			left: -30px
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: $accent
+		span
+			color: $green
+			border-bottom: 1px solid
+	.sliders
+		margin-top: 35px
+		.slider
+			outline: none
+
+section#need_our_services
+	background-image: url("../img/need_our_services_bg.jpg")
+	background-size: color
+	background-position: center
+	padding-top: 20px
+	padding-bottom: 20px
+	h2
+		font-size: 32px
+		margin-top: 25px
+		margin-bottom: 8px
+		color: #fff
+		&:before
+			top: 35px
+			height: 26px
+	a
+		color: #fff
+		border-bottom: 1px solid
+		font-size: 17px
+		font-family: "GilroyMedium"
+		text-decoration: none
+		position: relative
+		vertical-align: -35px
+		&:before
+			content: ""
+			position: absolute
+			top: 56%
+			margin-top: -1px
+			left: -30px
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: $accent
+	ul
+		padding-left: 15px
+		list-style: none
+		// list-style-image: url("../img/list_icon.png")
+		width: 85%
+		li
+			border-bottom: 1px solid #268f56
+			font-size: 17px
+			color: #fff
+			font-family: "GilroyLight"
+			position: relative
+			padding: 15px 0
+			margin-left: 41px
+			&:last-child
+				border-bottom: none
+			&:before
+				content: ""
+				width: 38px
+				height: 38px
+				display: inline-block
+				background-image: url("../img/list_icon.png")
+				position: absolute
+				left: -55px
+	ul.right_part
+		width: 102%
+		padding: 0
+		margin-left: -15px
+
+section#steam_cleaner
+	padding: 60px 0 50px 0
+	background-image: url("../img/steam_cleaner_bg.jpg")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	h2
+		font-size: 32px
+		line-height: 42px
+		margin-top: 95px
+		margin-bottom: 30px
+		&:before
+			top: 104px
+			height: 26px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+	.steam_cleaner_sliders
+		width: 430px
+		margin-left: 90px
+		.steam_cleaner_sliders_arrow
+			top: calc(50% - 25px)
+		.steam_cleaner_sliders_arrow.slick-gr-left
+			left: -90px
+		.steam_cleaner_sliders_arrow.slick-gr-right
+			right: -90px
+
+section#our_work
+	padding: 60px 0 50px 0
+	background-color: #fff
+	h2
+		font-size: 32px
+		line-height: 42px
+		margin-top: 75px
+		margin-bottom: 30px
+		&:before
+			top: 104px
+			height: 26px
+			left: 95px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+	.steam_cleaner_sliders
+		width: 430px
+		margin-left: 66px
+		.steam_cleaner_sliders_arrow
+			top: calc(50% - 25px)
+		.steam_cleaner_sliders_arrow.slick-gr-left
+			left: -90px
+		.steam_cleaner_sliders_arrow.slick-gr-right
+			right: -90px
+
+section#before_and_after
+	background-color: #f8f8f8
+	padding-top: 30px
+	padding-bottom: 60px
+	h2
+		font-size: 32px
+		margin-top: 25px
+		margin-bottom: 40px
+		&:before
+			top: 35px
+			height: 26px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+		vertical-align: -37px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 56%
+			margin-top: -1px
+			left: -30px
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: $accent
+	.before_and_after_slider
+		width: 90%
+		margin: auto
+		.slider
+			position: relative
+			img
+				width: 500px
+				max-height: 478px
+			.before
+				opacity: .15
+			.grade_wrapper
+				width: 200px
+				height: 50px
+				line-height: 56px
+				background-color: #fff
+				border-radius: 20px
+				text-align: center
+				box-shadow: 0 1px 3px 1px #b3b3b3
+				position: absolute
+				top: calc(50% - 25px)
+				left: calc(50% - 100px)
+				.fa-star
+					color: $accent
+					font-size: 25px
+		.slider.after
+			position: relative
+			display: block
+			&:before
+				content: ''
+				
+				border: 1px solid $accent
+				position: absolute
+				top: 6px
+				right: 18px
+				left: 5px
+				bottom: 4px
+				display: block
+		.slick-gr-left,.slick-gr-right
+			background: rgb(255,255,255)
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%)
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%)
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 )
+			box-shadow: 0 1px 4px 1px #e4e4e4
+		.before_and_after_arrow.slick-gr-left
+			left: -115px
+		.before_and_after_arrow.slick-gr-right
+			right: -100px
+section#FAQ
+	h2
+		font-size: 32px
+		margin-top: 25px
+		margin-bottom: 40px
+		&:before
+			top: 35px
+			height: 26px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+		vertical-align: -37px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 56%
+			margin-top: -1px
+			left: -30px
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: $accent
+	h3
+		font-family: "GilroyMedium"
+		font-size: 18px
+		color: $black
+		height: 60px
+		line-height: 60px
+		background: rgb(255,255,255)
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 100%)
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%)
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 )
+		padding-left: 20px
+		box-shadow: 0 1px 2px 1px #e7e7e7
+		border: 1px solid #f8f8f8
+		cursor: pointer
+		margin: 0
+	.accordion_item
+		position: relative
+		margin-bottom: 20px
+		.info
+			padding-left: 35px
+			font-family: "GilroyLight"
+			font-size: 17px
+			color: $black
+			display: none
+		.active_block
+			display: block
+		.ico_wrapper
+			width: 30px
+			height: 30px
+			background-color: $accent
+			border-radius: 50%
+			position: absolute
+			right: 17px
+			top: 17px
+			color: #fff
+			font-size: 37px
+			text-align: center
+			line-height: 31px
+			font-family: "GilroyLight"
+			.ico
+				position: relative
+				&:before
+					content: ""
+					display: block
+					position: absolute
+					width: 39px
+					height: 38px
+					border-radius: 50%
+					border: 1px solid $accent
+					z-index: 1
+					top: -4px
+					left: -5px
+				&:after
+					content: "+"
+					display: block
+					text-align: center
+					left: -0px
+					right: 0
+			.show_minus
+				position: relative
+				&:after
+					content: "-"
+					display: block
+					text-align: center
+					left: -0px
+					right: 0
+					line-height: 26.6px
+section#request
+	background-image: url("../img/request_bg.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	padding: 55px 0
+	margin-top: 40px
+	h2
+		font-size: 32px
+		color: #fff
+		line-height: 40px
+		&:before
+			top: 9px
+			height: 26px
+	form
+		padding-top: 12px
+		input
+			padding: 11px 0 11px 23px
+			border: none
+			font-family: "GilroyLight"
+			font-size: 17px
+			color: $black
+			outline: none
+			margin: 0
+			margin-right: 16px
+			min-height: 50px
+			min-width: 218px
+		button
+			border: none
+			height: 50px
+			font-size: 19px
+			font-family: "GilroyBold"
+			text-transform: inherit
+			padding: 11px 13px
+			vertical-align: -2px
+			cursor: pointer
+			border-bottom: 3px solid #eaad0c
+section#Lifehacks
+	padding: 58px 0 55px 0
+	background-color: #f8f8f8
+	h2
+		font-size: 32px
+		color: $black
+		line-height: 40px
+		margin-bottom: 32px
+		margin-top: 75px
+		&:before
+			top: 84px
+			height: 26px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+	.slick-gr-right
+		right: 0
+	.slick-gr-left
+		left: 0
+	.Lifehacks_sliders
+		.slide
+			margin-left: 60px
+			width: 430px
+			position: relative
+section#addition_to_cleaning
+	padding-top: 30px
+	h2
+		font-size: 32px
+		margin-top: 25px
+		margin-bottom: 40px
+		&:before
+			top: 35px
+			height: 26px
+	a
+		color: $black
+		border-bottom: 1px solid
+		text-decoration: none
+		font-size: 17px
+		font-family: "GilroyMedium"
+		vertical-align: -37px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 56%
+			margin-top: -1px
+			left: -30px
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: $accent
+	.items
+		text-align: center
+		padding: 35px 30px 30px 30px
+		width: 100%
+		min-height: 230px
+		max-height: 230px
+		font-size: 20px
+		margin-bottom: 30px
+		font-family: "GilroyBold"
+		color: $black
+		box-shadow: 0 0 2px 1px #e7e7e7
+		background: rgb(255,255,255)
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 64%, rgba(243,243,243,1) 100%)
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 64%,rgba(243,243,243,1) 100%)
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 64%,rgba(243,243,243,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 )
+		.wrapper_img
+			min-height: 84px
+			line-height: 84px
+		p
+			line-height: 27px
+
+section#Benefits
+	margin-top: 35px
+	padding-bottom: 15px
+	padding-top: 30px
+	background-color: $silver
+	h2
+		font-size: 32px
+		margin-top: 25px
+		margin-bottom: 30px
+		&:before
+			top: 35px
+			height: 26px
+	p
+		font-size: 17px
+		font-family: "GilroyLight"
+		color: $black
+		margin-bottom: 30px
+section#calculate
+	padding: 55px 0
+	background-image: url("../img/request_bg.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	h2
+		font-size: 32px
+		line-height: 40px
+		color: #fff
+		&:before
+			top: 8px
+			height: 26px
+	a
+		text-transform: inherit
+		font-size: 19px
+		font-family: "GilroyBold"
+		vertical-align: -24px
+
+footer
+	padding-top: 45px
+	padding-bottom: 45px
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			margin-bottom: 7px
+			a
+				text-decoration: none!important
+				border-bottom: 1px solid
+				font-family: "GilroyLight"
+				font-size: 17px
+				color: $black
+				&:hover
+					color: $accent
+		.title
+			font-size: 20px
+			font-family: "GilroySemiBold"
+			color: $black
+			margin-bottom: 12px
+
+@import "media" // Всегда в конце
